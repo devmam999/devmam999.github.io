@@ -43,7 +43,7 @@ export function Contact() {
           Let&apos;s work <span className="text-gradient">together</span>
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted">
-          I&apos;m actively looking for software engineering internships and new grad roles.
+          I&apos;m actively looking for software engineering internships.
           Whether you have a role in mind or just want to connect — my inbox is open.
         </p>
 

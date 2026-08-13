@@ -4,7 +4,7 @@ export const site = {
   role: "Software Engineer",
   eyebrow: "CS @ UCSB",
   tagline:
-    "Software engineer building projects — from features powered by RAG pipelines to full-stack applications tested by real users.",
+    "Software engineer building projects — from features powered by RAG pipelines to full-stack applications tested by real users. I am actively looking for a 2027 summer SWE internship",
   email: "devmam999@gmail.com",
   linkedin: "https://www.linkedin.com/in/devesh-mamidi",
   linkedinDisplay: "linkedin.com/in/devesh-mamidi",
