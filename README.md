@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Devesh Mamidi — Personal Site
 
-## Getting Started
+Portfolio site for recruiters and hiring managers. Built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) or [http://localhost:3001](http://localhost:3001) if 3000 is already in use.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Publish to GitHub Pages (`https://devmam999.github.io`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This is a **user site**, so the GitHub repo must be named **`devmam999.github.io`** and owned by `devmam999`. No `basePath` is needed because the site is served from the domain root.
 
-## Learn More
+Official references:
+- [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports)
+- [Next.js GitHub Pages template](https://github.com/nextjs/deploy-github-pages)
+- [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Create the repo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. On GitHub, create a **public** repository named `devmam999.github.io`.
+2. Push this project to that repo on the `main` branch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git remote add origin https://github.com/devmam999/devmam999.github.io.git
+git branch -M main
+git push -u origin main
+```
 
-## Deploy on Vercel
+### 2. Enable Pages from GitHub Actions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Repo **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Do not pick a branch as the source — the workflow deploys the `out/` folder
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Deploy
+
+Pushing to `main` runs `.github/workflows/deploy.yml`. It builds a static export and publishes it. You can also run the workflow from the **Actions** tab.
+
+The live site is [https://devmam999.github.io](https://devmam999.github.io). First publish can take a few minutes.
+
+## Notes
+
+- GitHub Pages is static only. This project uses `output: "export"` and unoptimized images so it can run there.
+- Set `NEXT_PUBLIC_SITE_URL=https://devmam999.github.io` in GitHub Actions (already in the workflow) so sitemap, robots, and Open Graph URLs are correct.
