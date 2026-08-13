@@ -182,5 +182,5 @@ pdf.multi_cell(0, 4, "Frameworks and Architectures: Node.js, Tailwind, FastAPI, 
 pdf.multi_cell(0, 4, "Databases: PostgreSQL, Supabase, Firebase, Convex, ChromaDB", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 pdf.multi_cell(0, 4, "Developer Tools: Git, GitHub, Visual Studio Code, Docker, Unix/Linux", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
-pdf.output("public/Devesh_Mamidi_Resume.pdf")
-print("wrote public/Devesh_Mamidi_Resume.pdf")
+pdf.output("public/Devesh_Resume.pdf")
+print("wrote public/Devesh_Resume.pdf")

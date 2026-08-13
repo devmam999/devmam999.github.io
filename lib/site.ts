@@ -10,7 +10,7 @@ export const site = {
   linkedinDisplay: "linkedin.com/in/devesh-mamidi",
   github: "https://github.com/devmam999",
   githubDisplay: "github.com/devmam999",
-  resumePath: "/Devesh_Mamidi_Resume.pdf",
+  resumePath: "/Devesh_Resume.pdf",
   headshot: {
     src: "/headshot.png",
     alt: "Headshot of Devesh Mamidi",
